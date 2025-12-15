@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CT-15 Checklist</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- SheetJS (xlsx) via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.20.2/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+<main class="wrap">
+  <h1>CT-15 – Dagelijkse checklist</h1>
+
+  <section class="card">
+    <p>
+      Template (view): <a id="viewLink" target="_blank" rel="noreferrer">open</a>
+    </p>
+    <p class="muted">
+      Werkwijze: invullen → download nieuw Excel-bestand (timestamp) → upload naar OneDrive map <b>02_ingevuld</b>.
+    </p>
+  </section>
+
+  <section class="card">
+    <div class="grid2">
+      <div>
+        <label>Ingevuld door</label>
+        <input id="filledBy" placeholder="Naam" />
+      </div>
+      <div>
+        <label>Opmerking</label>
+        <input id="remark" placeholder="Optioneel" />
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Checklist-items</h2>
+    <div id="items"></div>
+  </section>
+
+  <section class="actions">
+    <button id="reloadBtn">Template opnieuw laden</button>
+    <button id="downloadBtn">Download ingevulde Excel (timestamp)</button>
+  </section>
+
+  <p id="status"></p>
+</main>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
